@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>Email</title>
+    <!-- Inner CSS -->
+    <style>
+      /*---------------------------------------------------- import Fonts ----------------------------------------------------*/
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Special+Elite&display=swap");
+      *,
+      ::before,
+      ::after {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      span {
+        margin: 0;
+        padding: 0;
+        color: white;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      p {
+        line-height: 1.2;
+      }
+
+      input,
+      button {
+        border: none;
+      }
+
+      .container {
+        margin: 0 auto;
+        width: 100%;
+        border-radius: 5px;
+        padding: 0 2rem;
+      }
+
+      body {
+        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
+        font-style: normal;
+        line-height: 1.5;
+      }
+
+      h1,
+      h2,
+      h3,
+      h5,
+      h6 {
+        letter-spacing: 2px;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      span,
+      p {
+        font-size: 1.4rem;
+      }
+
+      p,
+      span,
+      li {
+        color: #000814;
+      }
+
+      section {
+        padding: 2rem 0;
+      }
+
+      .flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+
+      .flex_col {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+      }
+
+      .justify_center {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+
+      .align_center {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+
+      /*----------------------------------------------------
+      Header Area
+      ----------------------------------------------------*/
+      header {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 4rem;
+      }
+
+      /*----------------------------------------------------
+      Main Area
+      ----------------------------------------------------*/
+      .main {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        background-image: url(./images/bg.png);
+      }
+
+      /*----------------------------------------------------
+      Main Area
+      ----------------------------------------------------*/
+      .service_flex {
+        gap: 2rem;
+      }
+
+      .service_flex h2 {
+        color: #70c02e;
+        text-transform: uppercase;
+      }
+
+      .service_content {
+        gap: 0.5rem;
+      }
+
+      .service_content h2 {
+        font-size: 3rem;
+      }
+
+      .service_left {
+        -ms-flex-preferred-size: 35%;
+        flex-basis: 35%;
+      }
+
+      .mobile {
+        margin-top: -8rem;
+      }
+
+      .mobile img {
+        width: 80%;
+      }
+
+      .service_right {
+        -ms-flex-preferred-size: 65%;
+        flex-basis: 65%;
+      }
+
+      .service_right .btn {
+        margin-top: 2rem;
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+      }
+
+      .service_right .btn a {
+        background-color: #70c02e;
+        border-radius: 30px;
+        padding: 0.5rem 2rem;
+        color: white;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .service .main_content {
+        padding-right: 7rem;
+      }
+
+      .service .btn {
+        margin-right: 3rem;
+      }
+
+      /*----------------------------------------------------
+      bottom Area
+      ----------------------------------------------------*/
+      .bottom {
+        overflow: hidden;
+        position: relative;
+      }
+
+      .bottom_flex {
+        gap: 2rem;
+        width: 100%;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+
+      .bottom_flex img {
+        width: 40rem;
+      }
+
+      .bottom_left {
+        -ms-flex-preferred-size: 38%;
+        flex-basis: 38%;
+        font-size: 1.5rem;
+      }
+
+      .bottom_left h2 {
+        color: #70c02e;
+        font-size: 2.5rem;
+        font-weight: 500;
+      }
+
+      .bottom_left ul {
+        margin-left: 2.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .bottom_left .li_last_bold {
+        font-weight: bold;
+      }
+
+      .bottom_right {
+        position: absolute;
+        right: -3rem;
+        bottom: 0;
+        max-width: 100%;
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+      }
+
+      .bottom_right .laptop {
+        justify-self: flex-end;
+        line-height: 0%;
+      }
+
+      /*----------------------------------------------------
+      Footer Area
+      ----------------------------------------------------*/
+      footer {
+        background-image: url(images/footer_bg.png);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 0.5rem 0;
+      }
+
+      footer span {
+        color: white;
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!--==================================================-->
+    <!-----Start Main Section ----->
+    <!--===================================================-->
+    <main class="main"></main>
+
+    <!--==================================================-->
+    <!-----Start Service Section ----->
+    <!--===================================================-->
+    <section class="service">
+      <div class="container">
+        <div class="service_flex flex justify_center align_center">
+          <div class="service_left flex justify_center align_center">
+            <div class="mobile">
+              <img src="./images/mobile.png" alt="Smart phone" />
+            </div>
+          </div>
+          <div class="service_right">
+            <div class="service_content flex flex_col">
+              <div class="content_header">
+                <h2>A Full Service solution</h2>
+              </div>
+              <div class="main_content">
+                <p>
+                  Built on a powerful, easy-to-use system with 100% authentic
+                  integrated video testimonials & reviews created by a community
+                  of your potential customers.
+                </p>
+              </div>
+              <div class="btn"><a href="#">learn more</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==================================================-->
+    <!-----Start Bottom Section ----->
+    <!--===================================================-->
+    <section class="bottom">
+      <div class="container">
+        <div class="bottom_flex flex">
+          <div class="bottom_left">
+            <h2>You get:</h2>
+            <ul>
+              <li>Free domain (for a year)</li>
+              <li>User friendly content manager</li>
+              <li>Hosting, maintenance, backups & security</li>
+              <li>Annual design service*</li>
+              <li>Full migration of your existing site</li>
+              <li>Custom design</li>
+              <li>Premium customer service</li>
+              <li>Full compatibility with all screens</li>
+              <li>Content Assimilation*</li>
+              <li class="li_last_bold">
+                Video testimonials & reviews created especially for you
+              </li>
+            </ul>
+          </div>
+          <div class="bottom_right">
+            <div class="laptop">
+              <img src="./images/laptop.png" alt="laptop" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==================================================-->
+    <!-----Start Footer Section ----->
+    <!--===================================================-->
+
+    <footer>
+      <div class="container">
+        <span>*All inclusive package</span>
+      </div>
+    </footer>
+  </body>
+</html>
